@@ -7,7 +7,8 @@ public class ParkingLot {
 
         Tesla tesla= new Tesla("Model S",2022,94990,"Red",0);
         //has a relationship betwween parking lot class and tesla and toyota class
-
+toyota.start();
+tesla.start();
 
     }
 }
