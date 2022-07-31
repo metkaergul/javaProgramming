@@ -1,6 +1,8 @@
-package day39_Recap;
+package day39_Recap.ShapeTask;
 
-public class Square extends Shape{
+import day39_Recap.ShapeTask.Shape;
+
+public class Square extends Shape {
 
     private double side;
 

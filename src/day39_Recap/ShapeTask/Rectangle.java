@@ -1,6 +1,6 @@
-package day39_Recap;
+package day39_Recap.ShapeTask;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape {
     private double length,width;
 
 

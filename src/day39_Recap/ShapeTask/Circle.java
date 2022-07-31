@@ -1,6 +1,6 @@
-package day39_Recap;
+package day39_Recap.ShapeTask;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
 
     private double radius;
     public static double pi=3.14;
