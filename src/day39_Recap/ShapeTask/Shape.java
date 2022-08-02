@@ -1,8 +1,8 @@
 package day39_Recap.ShapeTask;
 
-import day31_Constructors.RestaurantTask.Server;
 
-import java.rmi.ServerError;
+
+
 
 public class Shape {
     private String name;
