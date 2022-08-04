@@ -12,6 +12,8 @@ public class Zoo {
         wildAnimal1.hunt();
         Lion lion =new Lion("Karkas",'M',2,"Medium","Black",true,false,false);
         lion.hunt();
+
+
     }
 }
 /*Create a class named Zoo:
