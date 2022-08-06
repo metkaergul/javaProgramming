@@ -1,12 +1,12 @@
 package day39_Recap.StudentTask;
 
-public class PersonSetnameProblematic {
+public class Person {
 
     private String name;
     private int age;
     private char gender;
 
-    public PersonSetnameProblematic(String name, int age, char gender) {
+    public Person(String name, int age, char gender) {
         setName(name);
         setAge(age);
         setGender(gender);
@@ -27,7 +27,8 @@ public class PersonSetnameProblematic {
     public void setName(String name) {
         char[]array = name.toCharArray();
         for (char eachSeq : array) {
-           if( !(Character.isLetterOrDigit(eachSeq))) {
+
+           if( (!(Character.isLetterOrDigit(eachSeq)))&& !(eachSeq ==' ')) {
                System.err.println("name can not contains special character");
                System.exit(1);
            }
@@ -45,6 +46,7 @@ public class PersonSetnameProblematic {
     public void setAge(int age) {
         if(age<0){
             System.err.println("invalid age: "+age);
+            System.exit(1);
         }
         this.age = age;
     }
