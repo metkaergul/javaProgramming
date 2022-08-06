@@ -5,6 +5,7 @@ import day39_Recap.StudentTask.Student;
 public class Checked_vs_Unchecked {
 
     public static void main(String[] args) {
+        //
 
 
         //unchecked exception:
