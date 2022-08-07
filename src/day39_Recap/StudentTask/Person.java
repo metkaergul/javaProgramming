@@ -25,18 +25,18 @@ public class Person {
     }
 
     public void setName(String name) {
-        char[]array = name.toCharArray();
+        char[] array = name.toCharArray();
         for (char eachSeq : array) {
 
-           if( (!(Character.isLetterOrDigit(eachSeq)))&& !(eachSeq ==' ')) {
-               System.err.println("name can not contains special character");
-               System.exit(1);
-           }
+            if ((!(Character.isLetterOrDigit(eachSeq))) && !(eachSeq == ' ')) {
+                System.err.println("name can not contains special character");
+                System.exit(1);
+            }
             this.name = name;
         }
 
-        if(name==null||name.isEmpty()){
-            System.err.println("name can not be null or empty");
+        if (name == null || name.isEmpty() || name.isBlank()) {
+            System.err.println("name can not be null or empty or blank");
             System.exit(1);
         }
 
@@ -44,8 +44,8 @@ public class Person {
     }
 
     public void setAge(int age) {
-        if(age<0){
-            System.err.println("invalid age: "+age);
+        if (age < 0) {
+            System.err.println("invalid age: " + age);
             System.exit(1);
         }
         this.age = age;
@@ -53,23 +53,23 @@ public class Person {
 
     public void setGender(char gender) {
 
-        if(!(gender=='M'||gender=='F')){
-            System.err.println("invalid gender "+gender);
+        if (!(gender == 'M' || gender == 'F')) {
+            System.err.println("invalid gender " + gender);
         }
         this.gender = gender;
     }
 
-    public void eat(){
+    public void eat() {
 
-        System.out.println(name+"is eating");
+        System.out.println(name + "is eating");
     }
 
     public void drink() {
-        System.out.println(name+" is drinking ");
+        System.out.println(name + " is drinking ");
     }
 
-    public void sleep(){
-        System.out.println(name+" is sleeping");
+    public void sleep() {
+        System.out.println(name + " is sleeping");
 
     }
 
@@ -81,6 +81,7 @@ public class Person {
                 '}';
     }
 }
+
 /*Create a class named Person:
 			Variables:
 				name, age, gender
