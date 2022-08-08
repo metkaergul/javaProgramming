@@ -13,7 +13,7 @@ public class DisadvantageOfThrowsKeyword2 {
         method3();
 
 
-        String str = null;
+        String str = null; //unchecked exceptions can be handled only by the try&catch block
         try {
             System.out.println(str.charAt(0));
         }catch (RuntimeException e){

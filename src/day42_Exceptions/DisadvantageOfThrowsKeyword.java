@@ -6,7 +6,7 @@ public class DisadvantageOfThrowsKeyword {
 
         System.out.println("Hello");
 
-//            sleep(2.5); // throws
+//           sleep(2.5); // throws
         System.out.println("Hello world");
 
         System.out.println("-------------------------");
