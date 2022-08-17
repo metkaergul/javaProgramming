@@ -1,12 +1,12 @@
 package DAY43_Abstraction.Car;
 
-public abstract class Parent {
+public abstract class Car {
     private final String brand, model;
     private String color;
     private final int year;
     private double price;
 
-    public Parent(String brand, String model, String color, int year, double price) {
+    public Car(String brand, String model, String color, int year, double price) {
         this.brand = brand;
         this.model = model;
         setColor(color);
