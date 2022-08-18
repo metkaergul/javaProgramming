@@ -1,7 +1,32 @@
 package DAY43_Abstraction.ShapeTask;
 
-public class Shape {
+public abstract class Shape {
 
+    private String name;
+
+    public Shape(String name) {
+        setName(name);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public abstract double area(); //we want to define  only functionality of the method so we create this method without body .
+    public abstract double perimeter(); //we want to define  only functionality of the method so we create this method without body .
+
+    @Override
+    public String toString() {
+        return "Shape{" +
+                "name='" + name + '\'' +
+                "area='" + area() + '\'' +
+                "perimeter='" + perimeter() + '\'' +
+                '}';
+    }
 }
 /*Shape task:
 
