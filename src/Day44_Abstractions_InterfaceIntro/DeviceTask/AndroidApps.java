@@ -5,7 +5,8 @@ import week14.task.OS;
 
 public interface AndroidApps extends Downloadable {
 
-     public  static String playStoreName = "PlayStore",OS = "Android";
+     static String playStoreName = "PlayStore";
+     static String OS = "Android";
 
 
 }
