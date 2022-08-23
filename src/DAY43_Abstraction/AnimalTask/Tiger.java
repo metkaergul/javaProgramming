@@ -2,7 +2,7 @@ package DAY43_Abstraction.AnimalTask;
 
 import day31_Constructors.Item;
 
-public final class Tiger extends Animal{
+public final class Tiger extends Animal implements WildAnimal{
 
 
     public Tiger(String name, String breed, char gender, int age, String size, String color) {
@@ -15,10 +15,10 @@ public final class Tiger extends Animal{
     }
 
 
-
-
-
-
+    @Override
+    public void hunt() {
+        System.out.println(getName()+" hunts snake");
+    }
 }
 /*Tiger
 eat(): eats deer*/
