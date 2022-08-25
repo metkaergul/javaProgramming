@@ -13,6 +13,8 @@ public class DriverObjects {
         safaridriver.getBrowserName();
         safaridriver.takeScreenShot();
 
+
+
         WebDriver driver1= new ChromeDriver("chrome");
         driver1.getTitle();
         driver1.close();
@@ -28,6 +30,8 @@ public class DriverObjects {
         driver3.close();
         System.out.println("driver3 = " + driver3);
         driver3.getTitle();
+
+
 
 
     }
