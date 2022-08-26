@@ -19,4 +19,13 @@ public class Sphere extends Shape implements Volume{
     public double volume() {
     return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Sphere{" +
+                super.toString()+
+                "volume= " +volume()+
+
+                "}";
+    }
 }

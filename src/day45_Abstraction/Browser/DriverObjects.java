@@ -1,5 +1,7 @@
 package day45_Abstraction.Browser;
 
+import day36_Inheritance.employeeTask.Driver;
+
 public class DriverObjects {
 
     public static void main(String[] args) {
@@ -15,18 +17,18 @@ public class DriverObjects {
 
 
 
-        WebDriver driver1= new ChromeDriver("chrome");
+        RemoteWebDriver driver1= new ChromeDriver("chrome");
         driver1.getTitle();
         driver1.close();
         driver1.findElement("cssSelector");
         System.out.println("driver1 = " + driver1);
 
-        WebDriver driver2= new SafariDriver("safari");
+        RemoteWebDriver driver2= new SafariDriver("safari");
         driver2.findElement("xpath");
         driver2.quit();
         driver2.close();
 
-        WebDriver driver3= new FirefoxDriver("firefox");
+        RemoteWebDriver driver3= new FirefoxDriver("firefox");
         driver3.close();
         System.out.println("driver3 = " + driver3);
         driver3.getTitle();

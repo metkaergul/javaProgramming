@@ -19,4 +19,13 @@ public class Cylinder extends Shape implements Volume{
     public double volume() {
             return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Cylinder{"
+                +super.toString()+
+                "volume ="+volume()+
+
+                "}";
+    }
 }

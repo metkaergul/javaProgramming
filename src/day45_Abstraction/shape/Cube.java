@@ -41,6 +41,7 @@ public class Cube extends Shape implements Volume{
         return "Cube{" +
                 super.toString() +
                 "side=" + side +
+                "volume=" + volume() +
                 '}';
     }
 }
