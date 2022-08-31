@@ -33,61 +33,73 @@ public class EmployeeObjectsTask {
 
         List<Employee> scrumMembers = new ArrayList<>();
         for (Employee eachScrumMember : employees) {
-            scrumMembers.add(eachScrumMember);
+            if(eachScrumMember instanceof Tester||eachScrumMember instanceof Developer){
+                scrumMembers.add(eachScrumMember);
+            }
+
         }
         System.out.println(scrumMembers);
 
         System.out.println("______________________________");
 
         List<Tester> testers = new ArrayList<>();
-        for (Employee eachEmployee : employees) {
-            if(eachEmployee instanceof Tester){
-                testers.add((Tester) eachEmployee);
+        List<Developer> developers = new ArrayList<>();
+        for (Employee eachScrumMembers : scrumMembers) {
+            if(eachScrumMembers instanceof Tester){
+                testers.add((Tester) eachScrumMembers);
+            }else if(eachScrumMembers instanceof Developer){
+                developers.add((Developer) eachScrumMembers);
             }
+
         }
-        System.out.println(testers);
+
+
         System.out.println("________________________________________");
 
-        List<Developer> developers = new ArrayList<>();
-        for (Employee eachEmployee : employees) {
-            if(eachEmployee instanceof Developer){
-                developers.add((Developer) eachEmployee);
+        Tester TesterHasMaxSalary= testers.get(0);
+        for (Tester eachTester : testers) {
+            if(eachTester.getSalary()>TesterHasMaxSalary.getSalary()){
+                  TesterHasMaxSalary=eachTester;
             }
 
         }
-
-        double maxSalaryOfTester= testers.get(0).getSalary();
-
-
-        int temp= 0;
-
-        for (int i = 0; i < testers.size(); i++) {
-
-            if(testers.get(i).getSalary()>maxSalaryOfTester){
-                maxSalaryOfTester=testers.get(i).getSalary();
-                temp=i;
-
-            }
-        }
-        System.out.println(testers.get(temp).getName()+ " has the max salary: "+maxSalaryOfTester);
+        System.out.println(TesterHasMaxSalary);
 
 
 
-        System.out.println("_____________________________________");
-        double maxSalaryOfDeveloper= developers.get(0).getSalary();
-
-
-        int temp2= 0;
-
-        for (int i = 0; i < developers.size(); i++) {
-
-            if(developers.get(i).getSalary()>maxSalaryOfDeveloper){
-                maxSalaryOfDeveloper=developers.get(i).getSalary();
-                temp=i;
-
-            }
-        }
-        System.out.println(developers.get(temp).getName()+ " has the max salary: "+maxSalaryOfDeveloper);
+//
+//        double maxSalaryOfTester= testers.get(0).getSalary();
+//
+//
+//        int temp= 0;
+//
+//        for (int i = 0; i < testers.size(); i++) {
+//
+//            if(testers.get(i).getSalary()>maxSalaryOfTester){
+//                maxSalaryOfTester=testers.get(i).getSalary();
+//                temp=i;
+//
+//            }
+//        }
+//        System.out.println(testers.get(temp).getName()+ " has the max salary: "+maxSalaryOfTester);
+//
+//
+//
+//        System.out.println("_____________________________________");
+//        double maxSalaryOfDeveloper= developers.get(0).getSalary();
+//
+//
+//        int temp2= 0;
+//
+//        for (int i = 0; i < developers.size(); i++) {
+//
+//            if(developers.get(i).getSalary()>maxSalaryOfDeveloper){
+//                maxSalaryOfDeveloper=developers.get(i).getSalary();
+//                temp=i;
+//
+//            }
+//        }
+//        System.out.println(developers.get(temp).getName()+ " has the max salary: "+maxSalaryOfDeveloper);
 
     }
 }
