@@ -24,5 +24,67 @@ public class PolymorphismPractice {
                 new Tesla("Model X", 2016, 48000, "White", 235000),
                 new Tesla("Model X", 2014, 48000, "White", 236000)};
 
+        for (Car each : cars) {
+
+           if(each instanceof Toyota){
+
+               if(each.year>=2010&&each.year<=2011){
+
+                   System.out.println(each);
+               }
+               }
+           if(each instanceof Tesla){
+
+               if(each.year>=2015&&each.year<=2016){
+
+                   System.out.println(each);
+               }
+           }
+           if(each instanceof Bmw){
+               System.out.println(each);
+           }
+
+           }
+
+        System.out.println("______________________________________");
+
+        Car hasHighestMileage=cars[0];//assuming that first stored element in the Car class has the highest mileage
+
+        for (Car each : cars) {
+            if (each.miles > hasHighestMileage.miles) {
+                hasHighestMileage = each;
+
+            }
+
+        }
+        System.out.println(hasHighestMileage.brand + " " + hasHighestMileage.model + " has the highest mileage: " + hasHighestMileage.miles);
+
+        Car hasLowestMileage=cars[0];//assuming that first stored element in the Car class has the lowest mileage
+            for (Car each : cars) {
+            if(each.miles<hasLowestMileage.miles){
+                hasLowestMileage=each;
+
+            }
+        }
+        System.out.println(hasLowestMileage.brand+" "+hasLowestMileage.model+" has the lowest mileage: "+hasLowestMileage.miles);
+
+
+
     }
-}
+
+    }
+
+/*
+	        1.2 Write a program that can display all the cars that are eligible for recall
+
+	        					Cars that are eligible for recall:
+	        							Toyota: from year 2010 to 2011
+	        							BMW: from year 1929 to 2022
+	        							Tesla: from year 2015-2016
+
+			1.3 Write a program that can display the car that has the highest mileage
+
+			1.3 Write a program that can display the car that has the lowest mileage
+
+
+*/
