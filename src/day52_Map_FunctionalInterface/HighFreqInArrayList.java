@@ -7,7 +7,7 @@ public class HighFreqInArrayList {
 
 
         List<String> list = new ArrayList<>();
-        list.addAll(Arrays.asList("java", "java", "python", "c#"));
+        list.addAll(Arrays.asList("java", "java", "python","python","python", "c#"));
 
 
         Map<String, Integer> map2 = new LinkedHashMap<>();// if preserving insertion order matters then it is safe to use it
@@ -26,7 +26,7 @@ public class HighFreqInArrayList {
             int eachValue = eachPair.getValue();
             if (eachValue > highestFreq) {
                 highestFreq = eachValue;
-                hasHighestFreq += eachPair.getKey();
+                hasHighestFreq = eachPair.getKey();
             }
         }
 
